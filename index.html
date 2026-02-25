@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImpulseLab - 수치해석 전문가</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Playfair+Display:wght@700;900&family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+        * {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .retro-bg {
+            background-color: #f5f1ed;
+            background-image:
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(139, 120, 93, 0.03) 2px,
+                    rgba(139, 120, 93, 0.03) 4px
+                );
+        }
+
+        .retro-border {
+            border: 3px dashed #6b5344;
+        }
+
+        .retro-solid-border {
+            border: 3px solid #6b5344;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .retro-heading {
+            color: #3d2817;
+            text-shadow: 2px 2px 0 #d4a574;
+        }
+
+        .retro-btn {
+            background-color: #8b785d;
+            color: #f5f1ed;
+            border: 2px solid #3d2817;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .retro-btn:hover {
+            background-color: #3d2817;
+            transform: translate(2px, 2px);
+            box-shadow: -2px -2px 0 #d4a574;
+        }
+
+        .project-card {
+            background-color: #fef9f4;
+            border: 2px solid #8b785d;
+            transform: rotate(-1deg);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: rotate(1deg) scale(1.02);
+        }
+
+        .skill-badge {
+            background-color: #d4a574;
+            color: #3d2817;
+            border: 2px solid #6b5344;
+            border-radius: 25px;
+            padding: 8px 16px;
+            display: inline-block;
+            margin: 4px;
+            font-weight: bold;
+        }
+
+        .divider {
+            height: 3px;
+            background: repeating-linear-gradient(
+                90deg,
+                #6b5344,
+                #6b5344 10px,
+                transparent 10px,
+                transparent 20px
+            );
+            margin: 40px 0;
+        }
+
+        .hero-section {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .logo-box {
+            display: inline-block;
+            padding: 30px 50px;
+            border: 4px solid #3d2817;
+            background-color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section {
+                min-height: 400px;
+            }
+
+            .logo-box {
+                padding: 20px 30px;
+            }
+        }
+    </style>
+</head>
+<body class="retro-bg">
+    <!-- Header/Navigation -->
+    <header class="bg-white retro-solid-border border-b-4 border-b-amber-900 sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo-box" style="font-family: 'Noto Sans KR', sans-serif;">
+                <h1 class="text-2xl font-bold" style="color: #3d2817; letter-spacing: 1px;">ImpulseLab</h1>
+            </div>
+            <ul class="hidden md:flex gap-8 text-amber-900 font-bold">
+                <li><a href="#about" class="hover:underline transition">소개</a></li>
+                <li><a href="#skills" class="hover:underline transition">역량</a></li>
+                <li><a href="#projects" class="hover:underline transition">프로젝트</a></li>
+                <li><a href="#contact" class="hover:underline transition">연락</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="text-center">
+            <img src="assets/images/logo.png" alt="ImpulseLab Logo" class="mx-auto mb-8 max-w-xs md:max-w-md" style="max-height: 300px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));">
+            <p class="text-lg mb-4 text-amber-900" style="letter-spacing: 3px;">━━━━━━━━━━</p>
+            <h2 class="text-5xl md:text-7xl retro-heading mb-4">FAST & SMART</h2>
+            <p class="text-2xl text-amber-900 mb-8 font-bold">수치해석 전문가</p>
+            <p class="text-lg mb-8 text-amber-900" style="letter-spacing: 3px;">━━━━━━━━━━</p>
+            <p class="text-amber-800 max-w-2xl mx-auto mb-12">
+                다양한 대형 수치해석 프로젝트 경험으로<br>
+                신뢰할 수 있는 솔루션을 제공합니다
+            </p>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div class="retro-border p-8 md:p-12 bg-white">
+            <h2 class="text-4xl retro-heading mb-8">ImpulseLab 소개</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-lg text-amber-900 leading-relaxed mb-6">
+                        ImpulseLab은 수치해석 분야의 프리랜서 전문가입니다.
+                        복잡한 과학 및 공학 문제를 효율적으로 해결하는 데
+                        특화되어 있습니다.
+                    </p>
+                    <p class="text-lg text-amber-900 leading-relaxed">
+                        <strong>Fast</strong>: 빠른 처리 속도로 결과 도출<br>
+                        <strong>Smart</strong>: 지능형 알고리즘 적용
+                    </p>
+                </div>
+                <div class="retro-border p-8 bg-amber-50">
+                    <h3 class="text-2xl retro-heading mb-4">핵심 가치</h3>
+                    <ul class="text-amber-900 space-y-3 font-bold">
+                        <li>✓ 정확성</li>
+                        <li>✓ 효율성</li>
+                        <li>✓ 신뢰성</li>
+                        <li>✓ 혁신성</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <h2 class="text-4xl retro-heading mb-12 text-center">전문 역량</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="retro-border p-8 bg-white">
+                <h3 class="text-2xl retro-heading mb-6 text-amber-900">수치해석 분야</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge">선형대수</span>
+                    <span class="skill-badge">미분방정식</span>
+                    <span class="skill-badge">최적화</span>
+                    <span class="skill-badge">보간법</span>
+                    <span class="skill-badge">적분</span>
+                    <span class="skill-badge">시뮬레이션</span>
+                </div>
+            </div>
+
+            <div class="retro-border p-8 bg-white">
+                <h3 class="text-2xl retro-heading mb-6 text-amber-900">프로그래밍 언어</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">MATLAB</span>
+                    <span class="skill-badge">C++</span>
+                    <span class="skill-badge">Fortran</span>
+                    <span class="skill-badge">NumPy</span>
+                    <span class="skill-badge">SciPy</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="retro-border p-8 bg-amber-50">
+            <h3 class="text-2xl retro-heading mb-4 text-amber-900">전문 분야</h3>
+            <p class="text-amber-900 mb-4">
+                광학 시뮬레이션, 전자기학, 신호처리 등
+                다양한 분야의 대형 수치해석 프로젝트를 성공적으로 수행했습니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <h2 class="text-4xl retro-heading mb-12 text-center">프로젝트 경험</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="project-card p-8">
+                <h3 class="text-2xl retro-heading text-amber-900 mb-3">광학 시뮬레이션</h3>
+                <p class="text-amber-900 mb-4 font-bold">광학 시스템 설계 및 최적화</p>
+                <p class="text-amber-800">
+                    복잡한 광학 시스템의 고속 광선추적(Ray Tracing) 및
+                    파동광학 시뮬레이션을 통한 설계 최적화.
+                </p>
+            </div>
+
+            <div class="project-card p-8">
+                <h3 class="text-2xl retro-heading text-amber-900 mb-3">전자기장 해석</h3>
+                <p class="text-amber-900 mb-4 font-bold">전자기 시스템 설계</p>
+                <p class="text-amber-800">
+                    Maxwell 방정식 기반의 고속 전자기장 수치해석으로
+                    안테나, 센서, 전기기기 설계 최적화.
+                </p>
+            </div>
+
+            <div class="project-card p-8">
+                <h3 class="text-2xl retro-heading text-amber-900 mb-3">파동 전파 분석</h3>
+                <p class="text-amber-900 mb-4 font-bold">음향 및 진동 해석</p>
+                <p class="text-amber-800">
+                    음파, 초음파, 진동 전파의 정밀한 수치해석으로
+                    소음 제어 및 진동 최적화 솔루션 제공.
+                </p>
+            </div>
+
+            <div class="project-card p-8">
+                <h3 class="text-2xl retro-heading text-amber-900 mb-3">신호처리 및 데이터 분석</h3>
+                <p class="text-amber-900 mb-4 font-bold">고급 분석 알고리즘</p>
+                <p class="text-amber-800">
+                    대용량 데이터의 신호처리 및 통계 분석으로
+                    의미 있는 인사이트 도출.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div class="retro-border p-12 bg-white text-center">
+            <h2 class="text-4xl retro-heading mb-8">프로젝트 의뢰</h2>
+            <p class="text-lg text-amber-900 mb-8">
+                혁신적인 수치해석 솔루션이 필요하신가요?<br>
+                ImpulseLab과 함께 시작하세요!
+            </p>
+            <button class="retro-btn px-8 py-4 text-lg rounded">
+                지금 연락하기
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-50 py-12 mt-16 retro-solid-border border-t-4">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="mb-4 font-bold text-lg">ImpulseLab</p>
+            <p class="mb-2">수치해석 전문가 프리랜서</p>
+            <p class="text-sm opacity-80">Fast & Smart Numerical Solutions</p>
+            <div class="mt-6 pt-6 border-t border-amber-700 text-sm opacity-70">
+                <p>&copy; 2026 ImpulseLab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 0.6s ease-in-out';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .retro-border').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Fade in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
